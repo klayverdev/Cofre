@@ -4,8 +4,6 @@ Um gerenciador de senhas pessoal, estático e criptografado no navegador — sem
 
 **[Ver demo ao vivo →](#)** · senha mestra de demonstração: `cofre-demo-2024`
 
-> A demo usa dados fictícios (`vault.json` de exemplo) só para você explorar a interface. Para uso real, cada pessoa gera o próprio cofre com a própria senha mestra — veja "Como usar" abaixo.
-
 ## Como funciona
 
 Toda a criptografia acontece no navegador, do lado do cliente:
@@ -60,4 +58,4 @@ Como o GitHub Pages publica o conteúdo publicamente (a menos que você use GitH
 
 ## Licença
 
-MIT — sinta-se à vontade para usar, estudar e adaptar.
+[MIT](LICENSE)
