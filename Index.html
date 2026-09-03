@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cofre</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- GATE: unlock existing or create new -->
+  <div class="gate" id="gate">
+    <div class="gate-mark"></div>
+    <h1 id="gate-title">Abrir cofre</h1>
+    <p class="sub" id="gate-sub">Digite a senha mestra para descriptografar o cofre carregado deste repositório.</p>
+
+    <div id="gate-msg"></div>
+
+    <div class="field">
+      <label for="pw1">Senha mestra</label>
+      <input type="password" id="pw1" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="field" id="pw2-field" style="display:none;">
+      <label for="pw2">Confirme a senha mestra</label>
+      <input type="password" id="pw2" autocomplete="off" spellcheck="false">
+    </div>
+
+    <div class="row-actions">
+      <button class="btn primary block" id="gate-submit">Abrir</button>
+    </div>
+
+    <div class="switch-mode" id="switch-mode"></div>
+
+    <div class="filepick" id="filepick">
+      Carregar de outro arquivo <code>.json</code>?
+      <label for="file-input">escolher arquivo</label>
+      <input type="file" id="file-input" accept="application/json" style="display:none;">
+    </div>
+  </div>
+
+  <!-- VAULT -->
+  <div id="vault">
+    <header class="top">
+      <h1>Cofre</h1>
+      <div class="actions">
+        <button class="btn" id="save-btn">Baixar cofre atualizado</button>
+        <button class="btn ghost" id="lock-btn">Trancar</button>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Buscar por site ou usuário…">
+    </div>
+
+    <div id="editor-slot"></div>
+
+    <ul class="entries" id="entries"></ul>
+    <div class="empty" id="empty-state" style="display:none;">Nenhuma senha guardada ainda.</div>
+
+    <div class="add-bar">
+      <button class="btn block" id="add-btn">+ Adicionar senha</button>
+    </div>
+
+    <p class="save-notice">
+      <b>Lembrete:</b> nada é salvo sozinho. Depois de adicionar, editar ou remover uma senha,
+      clique em <b>"Baixar cofre atualizado"</b> e faça o commit/push do arquivo <code class="mono">vault.json</code>
+      baixado para o repositório — só assim a mudança fica salva permanentemente.
+    </p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
